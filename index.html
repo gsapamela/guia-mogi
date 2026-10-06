@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Locais e Eventos — Início</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="identidade">
+      <p class="logo">Guia de Locais</p>
+      <p class="titulo">Mogi das Cruzes</p>
+    </div>
+
+    <nav aria-label="Menu principal">
+      <ul class="menu-lista">
+        <li><a href="index.html" aria-current="page" class="ativo">Início</a></li>
+        <li><a href="#locais">Locais</a></li>
+        <li><a href="#agenda">Eventos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <aside class="lateral">
+    <nav aria-label="Categorias de locais">
+      <h2 class="lateral-titulo">Explorar</h2>
+
+      <ul class="lateral-lista">
+        <li><a href="#locais">Parques</a></li>
+        <li><a href="#locais">Museus</a></li>
+        <li><a href="#locais">Teatros</a></li>
+        <li><a href="#agenda">Eventos</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="hero-conteudo">
+
+        <h1>Festival de inverno de Mogi das Cruzes celebra a cultura da cidade</h1>
+
+        <p>Locais, eventos e programação cultural em um só lugar.</p>
+
+        <div class="hero-imagens">
+          <figure class="hero-imagem">
+            <img
+              src="imagens/teatro.jpg"
+              alt="Teatro Vasconcelos durante evento cultural em Mogi das Cruzes"
+            >
+          </figure>
+
+          <figure class="hero-imagem">
+            <img
+              src="imagens/parque.jpg"
+              alt="Parque em Mogi das Cruzes durante evento cultural"
+            >
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="cards" id="locais" aria-labelledby="titulo-locais">
+      <h2 id="titulo-locais" class="sr-only">Locais para visitar</h2>
+
+      <article class="card">
+        <h2>Parque Centenário</h2>
+        <p>Área verde, pista de caminhada e eventos gratuitos.</p>
+      </article>
+
+      <article class="card">
+        <h2>Museu Municipal</h2>
+        <p>Acervo histórico e exposições temporárias.</p>
+      </article>
+
+      <article class="card">
+        <h2>Teatro Vasconcelos</h2>
+        <p>Espetáculos de teatro, música e dança.</p>
+      </article>
+
+      <article class="card">
+        <h2>Mercado Municipal</h2>
+        <p>Produtos locais, gastronomia e feiras temáticas.</p>
+      </article>
+
+      <article class="card">
+        <h2>Jardim Japonês</h2>
+        <p>Trilhas sombreadas, lagos e casa de chá.</p>
+      </article>
+
+      <article class="card">
+        <h2>Museu de Arte Contemporânea e História Natural de Mogi das Cruzes</h2>
+        <p>Exposições rotativas e acervo permanente.</p>
+      </article>
+
+      <article class="card">
+        <h2>Sesc</h2>
+        <p>Atividades esportivas e culturais.</p>
+      </article>
+
+      <article class="card">
+        <h2>Bosque da Paz</h2>
+        <p>Picnic, playground e anfiteatro ao ar livre.</p>
+      </article>
+    </section>
+
+    <section class="agenda" id="agenda" aria-labelledby="titulo-agenda">
+      <h2 id="titulo-agenda" class="agenda-titulo">Próximos eventos</h2>
+
+      <ul class="agenda-lista">
+        <li class="agenda-item">
+          <time datetime="2026-09-26">26 set</time>
+          <div class="evento-info">
+            <strong>Feira gastronômica</strong>
+            <span>Mercado Municipal</span>
+          </div>
+        </li>
+
+        <li class="agenda-item">
+          <time datetime="2026-10-03">03 out</time>
+          <div class="evento-info">
+            <strong>Orquestra no parque</strong>
+            <span>Parque Centenário</span>
+          </div>
+        </li>
+
+        <li class="agenda-item">
+          <time datetime="2026-10-10">10 out</time>
+          <div class="evento-info">
+            <strong>Mostra de cinema</strong>
+            <span>Teatro Vasconcelos</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="rodape" id="contato">
+    <p>Guia de Locais e Eventos — Mogi das Cruzes</p>
+  </footer>
+</body>
+
+</html>

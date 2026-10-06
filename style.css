@@ -1,0 +1,569 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   CONFIGURAÇÕES GERAIS
+========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-areas:
+    "topo topo"
+    "lado conteudo"
+    "rodape rodape";
+
+  grid-template-columns: 200px minmax(0, 1fr);
+  grid-template-rows: auto 1fr auto;
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+a:focus-visible {
+  outline: 3px solid #f1c40f;
+  outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MÍDIA RESPONSIVA
+========================================================= */
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* =========================================================
+   CABEÇALHO
+========================================================= */
+
+.cabecalho {
+  grid-area: topo;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.75rem 1.5rem;
+
+  background: #2980b9;
+  color: #fff;
+
+  padding: 0.75rem 1.5rem;
+}
+
+.identidade {
+  min-width: 0;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.titulo {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+
+/* =========================================================
+   MENU PRINCIPAL
+========================================================= */
+
+.menu-lista {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem;
+
+  list-style: none;
+}
+
+.menu-lista a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+
+  padding: 0.5rem 0.75rem;
+
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+
+  border-radius: 6px;
+}
+
+.menu-lista a:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.menu-lista .ativo {
+  border-bottom: 3px solid #f1c40f;
+  border-radius: 0;
+}
+
+
+/* =========================================================
+   LATERAL
+========================================================= */
+
+.lateral {
+  grid-area: lado;
+
+  background: #f0f4f8;
+
+  padding: 1.5rem 1rem;
+}
+
+.lateral-titulo {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #2980b9;
+  margin-bottom: 0.75rem;
+}
+
+.lateral-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  list-style: none;
+}
+
+.lateral-lista a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+
+  padding: 0.5rem 0.75rem;
+
+  color: #333;
+  text-decoration: none;
+
+  border-radius: 6px;
+}
+
+.lateral-lista a:hover {
+  background: #dde7f0;
+}
+
+
+/* =========================================================
+   CONTEÚDO PRINCIPAL
+========================================================= */
+
+main {
+  grid-area: conteudo;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 35vh;
+
+  background: #f8f9fa;
+
+  text-align: center;
+
+  padding: 2.5rem 1.5rem;
+}
+
+.hero-conteudo {
+  width: min(100%, 850px);
+  min-width: 0;
+}
+
+.hero h1 {
+  max-width: 30ch;
+
+  margin: 0 auto 0.75rem;
+
+  font-size: clamp(
+    1.4rem,
+    2.5vw + 0.8rem,
+    2.25rem
+  );
+
+  line-height: 1.25;
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+
+.hero p {
+  max-width: 60ch;
+  margin: 0 auto;
+  font-size: 1rem;
+}
+
+
+/* =========================================================
+   IMAGENS DO DESTAQUE
+========================================================= */
+
+.hero-imagens {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 1rem;
+
+  width: min(100%, 620px);
+
+  margin: 1.5rem auto 0;
+}
+
+.hero-imagem {
+  width: 100%;
+
+  aspect-ratio: 1 / 1;
+
+  overflow: hidden;
+
+  margin: 0;
+
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.hero-imagem img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   CARDS
+========================================================= */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(100%, 250px), 1fr));
+
+  gap: 1rem;
+
+  padding: 2rem;
+}
+
+.card {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+  border-radius: 8px;
+
+  padding: 1.5rem;
+}
+
+.card h2 {
+  color: #3498db;
+
+  font-size: 1.1rem;
+
+  line-height: 1.35;
+
+  margin-bottom: 0.5rem;
+
+  overflow-wrap: anywhere;
+}
+
+.card p {
+  overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   AGENDA
+========================================================= */
+
+.agenda {
+  padding: 0 2rem 2rem;
+}
+
+.agenda-titulo {
+  font-size: 1.1rem;
+
+  color: #2980b9;
+
+  margin-bottom: 0.75rem;
+}
+
+.agenda-lista {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+
+  list-style: none;
+}
+
+.agenda-item {
+  display: grid;
+
+  grid-template-columns:
+    max-content minmax(0, 1fr);
+
+  align-items: start;
+
+  column-gap: 0.75rem;
+
+  background: #fff;
+
+  border: 1px solid #ddd;
+  border-left: 4px solid #2980b9;
+  border-radius: 6px;
+
+  padding: 0.75rem 1rem;
+
+  min-width: 0;
+}
+
+.agenda-item time {
+  font-weight: 700;
+  color: #2980b9;
+
+  white-space: nowrap;
+}
+
+.evento-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.evento-info strong,
+.evento-info span {
+  overflow-wrap: anywhere;
+}
+
+.evento-info span {
+  color: #666;
+}
+
+
+/* =========================================================
+   RODAPÉ
+========================================================= */
+
+.rodape {
+  grid-area: rodape;
+
+  background: #333;
+
+  color: #fff;
+
+  text-align: center;
+
+  padding: 1.5rem;
+}
+
+
+/* =========================================================
+   TABLETS / TELAS INTERMEDIÁRIAS
+========================================================= */
+
+@media (max-width: 850px) {
+
+  body {
+    grid-template-columns: 170px minmax(0, 1fr);
+  }
+
+  .cards {
+    grid-template-columns:
+      repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+
+    padding: 1.5rem;
+  }
+
+  .agenda {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .hero-imagens {
+    width: min(100%, 560px);
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+  body {
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "topo"
+      "conteudo"
+      "lado"
+      "rodape";
+  }
+
+
+  /* HEADER */
+
+  .cabecalho {
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 1rem;
+  }
+
+  .menu-lista {
+    justify-content: center;
+  }
+
+
+  /* LATERAL */
+
+  .lateral {
+    padding: 1.25rem;
+  }
+
+  .lateral-lista {
+    display: grid;
+
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 0.5rem;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: auto;
+
+    padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+  }
+
+
+  /* IMAGENS */
+
+  .hero-imagens {
+    grid-template-columns: 1fr;
+
+    width: 100%;
+
+    gap: 1rem;
+  }
+
+  .hero-imagem {
+    aspect-ratio: 1 / 1;
+  }
+
+
+  /* CARDS */
+
+  .cards {
+    grid-template-columns: 1fr;
+
+    padding: 1.25rem;
+  }
+
+
+  /* AGENDA */
+
+  .agenda {
+    padding: 0 1.25rem 1.5rem;
+  }
+
+  .agenda-item {
+    grid-template-columns: 1fr;
+
+    row-gap: 0.25rem;
+  }
+
+  .agenda-item time {
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   TELAS MUITO PEQUENAS
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .menu-lista {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .menu-lista li,
+  .menu-lista a {
+    width: 100%;
+  }
+
+  .lateral-lista {
+    grid-template-columns: 1fr;
+  }
+}
