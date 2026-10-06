@@ -20,4 +20,12 @@ A organização do conteúdo no mobile foi ajustada para que o conteúdo princip
 A estrutura da página foi organizada semanticamente com h1, h2, section, nav, article, time e footer.
 
 
+# Registro do projeto
+
+Projeto Guia de Locais e Eventos.
+
+## Objetivo
+
+Organizar informações sobre locais e eventos de Mogi das Cruzes.
+
 
