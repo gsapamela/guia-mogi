@@ -75,19 +75,25 @@ img {
 .cabecalho {
   grid-area: topo;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-
-  gap: 0.75rem 1.5rem;
-
   background: #2980b9;
   color: #fff;
 
   padding: 0.75rem 1.5rem;
 
   border-bottom: 3px solid #1f6694;
+}
+
+.cabecalho-conteudo {
+  width: min(100%, 1200px);
+
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  gap: 0.75rem 1.5rem;
 }
 
 .identidade {
@@ -224,9 +230,11 @@ main {
 
   margin: 0 auto 0.75rem;
 
-  font-size: clamp(1.4rem,
-      2.5vw + 0.8rem,
-      2.25rem);
+  font-size: clamp(
+    1.4rem,
+    2.5vw + 0.8rem,
+    2.25rem
+  );
 
   line-height: 1.25;
   text-wrap: balance;
@@ -463,11 +471,13 @@ main {
   /* HEADER */
 
   .cabecalho {
-    justify-content: center;
-
     text-align: center;
 
     padding: 1rem;
+  }
+
+  .cabecalho-conteudo {
+    justify-content: center;
   }
 
   .menu-lista {
